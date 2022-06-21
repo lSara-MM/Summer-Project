@@ -148,6 +148,8 @@ bool ModuleRender::DrawQuad(const SDL_Rect& rect, Uint8 r, Uint8 g, Uint8 b, Uin
 	return ret;
 }
 
+// Text rendering
+// How To Use: call function TextDraw("text to render", pos X, pos Y, red, green, blue, opacity [255 full visible | 0 full transparent], size)
 bool ModuleRender::TextDraw(const char* text, int x, int y, int red, int green, int blue, int alpha, int size)
 {
 	bool ret = true;
