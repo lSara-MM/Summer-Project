@@ -29,6 +29,9 @@
     <Filter Include="Source Files\Modules\Gameplay\Screens">
       <UniqueIdentifier>{a9b7f39b-be2f-4a11-8477-2f7e53ef9458}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Entities\Nuestro juego">
+      <UniqueIdentifier>{5a87c553-245c-465c-95c8-0b9109884557}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h">
@@ -106,6 +109,9 @@
     <ClInclude Include="sLvl1.h">
       <Filter>Source Files\Modules\Gameplay\Screens</Filter>
     </ClInclude>
+    <ClInclude Include="Creature.h">
+      <Filter>Source Files\Entities\Nuestro juego</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Module.cpp">
@@ -176,6 +182,9 @@
     </ClCompile>
     <ClCompile Include="sLvl1.cpp">
       <Filter>Source Files\Modules\Gameplay\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Creature.cpp">
+      <Filter>Source Files\Entities\Nuestro juego</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
