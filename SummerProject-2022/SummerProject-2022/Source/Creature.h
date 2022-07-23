@@ -40,12 +40,31 @@ public:
 	void SetDodge(int stat);
 	void SetAttack(int stat);
 	void SetCrit(int stat);
+	void SetAccuarcy(int stat);
 	void SetInitiative(int stat);
+	void SetMovementRes(int stat);
 	void SetStunRes(int stat); 
 	void SetDebuffRes(int stat);
 	void SetPoisonRes(int stat); 
 	
 	//STATS GETTERS
+
+	char* GetName();
+	int GetMaxHP();
+	int GetHP();
+	int GetArmor();
+	int GetDodge();
+	int GetAttack();
+	int GetCrit();
+	int GetAccurcy();
+	int GetInitiative();
+	int GetMovementRes();
+	int GetStunRes();
+	int GetDebuffRes();
+	int GetPoisonRes();
+
+
+
 
 public:
 	// The current position in the world
@@ -62,25 +81,30 @@ protected:
 	Animation* currentAnim = nullptr;
 
 	// The enemy's collider
-	Collider* collider = nullptr;
+	Collider* collider = nullptr; //Se necesita esto para el cursor?
 
 	// Original spawn position. Stored for movement calculations
 	iPoint spawnPos;
 
 	//STATS
-	const char* name[40]; //Nombre enemigo o heroe
+	char* name[40]; //Nombre enemigo o heroe
 	int maxHP; //Vida maxima
 	int HP; //Vida actual
 	int armor; //Armadura, reduce % el daño recibido 
 	int dodge; // Posibildad de esquivar el golpe
 	int attack; //Daño base diferentes ataques tendran distintos multiplicadores
 	int crit; // Incremento posibildad ataque critico
+	int accuary; //Probabilidad de no ser esquivado en cada ataque
 	int initiative; //Bonificador para ver quien empieza la ronda, puede ser rand() % 8
 	int movementRes; //Probabilidad de resistir movimiento forzado
 	int stunRes; //Probabilidad de resistir stun
 	int debuffRes; //Probabilidad de resistir mermas
 	int poisonRes; ////Probabilidad de resistir veneno
 	//LA IDEA ES TENER TAMBIEN SANGRADO Y QUEMADURA
+
+	int ArrayPos;
+
+	bool MyTurn;
 
 
 };

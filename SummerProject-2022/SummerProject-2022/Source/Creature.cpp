@@ -43,38 +43,71 @@ void Creature::OnCollision(Collider* collider)
 	App->audio->PlayFx(destroyedFx);
 }
 
-//void Creature::
-//
-//void Creature::
-//
-//void Creature::
-//
-//void Creature::
-//
-//void Creature::
-//
-//void Creature::
-//
-//void Creature::
-//
-//void Creature::
-//
-//void Creature::
-//
-//void Creature::
-//
-//void Creature::
-//
-//void Creature::
-//
-//void Creature::
-//
-//void Creature::
-//
-//void Creature::
-//
-//void Creature::
-//
-//void Creature::
-//
-//void Creature::
+//Setters
+
+void Creature::SetMaxHP(int stat) { this->maxHP = stat; }
+
+void Creature::SetArmor(int stat) { this->armor = stat; }
+
+void Creature::SetDodge(int stat) { this->dodge = stat; }
+
+void Creature::SetAttack(int stat) { this->attack = stat; }
+
+void Creature::SetCrit(int stat) { this->attack = stat; }
+
+void Creature::SetAccuarcy(int stat) { this->accuary = stat; }
+
+void Creature::SetInitiative(int stat) { this->initiative = stat; }
+
+void Creature::SetStunRes(int stat) { this->stunRes = stat; }
+
+void Creature::SetMovementRes(int stat) { this->movementRes = stat; }
+
+void Creature::SetDebuffRes(int stat) { this->debuffRes = stat; }
+
+void Creature::SetPoisonRes(int stat) { this->poisonRes = stat; }
+
+//HP Managment
+
+void Creature::takeHeal(int heal) 
+{
+	if ((maxHP - HP) < heal) { HP = maxHP; }
+	else { HP += heal; }
+}
+
+
+
+void Creature::takeDamage(int damage) //Se puede complicar a futuro con perforacion de armadura etc
+{
+	//Falta calculo de si es un critico
+	HP -= (damage - ((float)armor / 100) * damage);
+	if (HP < 0) { HP = 0; }
+}
+
+//Getters
+
+char* Creature::GetName() { return this->name[40]; }
+
+int Creature::GetMaxHP() { return this->maxHP; }
+
+int Creature::GetHP() { return this->HP; }
+
+int Creature::GetArmor() { return this->armor; }
+
+int Creature::GetDodge() { return this->dodge; }
+
+int Creature::GetAccurcy() { return this->accuary; }
+
+int Creature::GetCrit() { return this->crit; }
+
+int Creature::GetAttack() { return this->attack; }
+
+int Creature::GetInitiative() { return this->initiative; }
+
+int Creature::GetDebuffRes() { return this->debuffRes; }
+
+int Creature::GetMovementRes() { return this->movementRes; }
+
+int Creature::GetPoisonRes() { return this->poisonRes; }
+
+int Creature::GetStunRes() { return this->stunRes; }
