@@ -112,6 +112,12 @@
     <ClInclude Include="Creature.h">
       <Filter>Source Files\Entities\WIP</Filter>
     </ClInclude>
+    <ClInclude Include="Hero.h">
+      <Filter>Source Files\Entities\WIP</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>Source Files\Entities\WIP</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Module.cpp">
@@ -184,6 +190,12 @@
       <Filter>Source Files\Modules\Gameplay\Screens</Filter>
     </ClCompile>
     <ClCompile Include="Creature.cpp">
+      <Filter>Source Files\Entities\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="Hero.cpp">
+      <Filter>Source Files\Entities\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
       <Filter>Source Files\Entities\WIP</Filter>
     </ClCompile>
   </ItemGroup>

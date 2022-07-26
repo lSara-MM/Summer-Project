@@ -12,6 +12,7 @@ class Creature
 public:
 	// Constructor
 	// Saves the spawn position for later movement calculations
+	Creature(); //Hero pide un tipo de constructor sin parametros
 	Creature(int x, int y);
 
 	// Destructor

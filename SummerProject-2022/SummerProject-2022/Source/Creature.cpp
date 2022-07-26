@@ -6,6 +6,8 @@
 #include "ModuleAudio.h"
 #include "ModuleRender.h"
 
+Creature::Creature() { spawnPos = position; };
+
 Creature::Creature(int x, int y) : position(x, y) //No hace falta inicializar los atributos se hara con los heroes y monstruos especificos
 {
 	spawnPos = position;
